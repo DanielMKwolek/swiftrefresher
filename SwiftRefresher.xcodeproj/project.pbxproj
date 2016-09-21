@@ -10,6 +10,8 @@
 		6588F6DE1D91EDB30072ED52 /* SwiftRefresher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6588F6D41D91EDB30072ED52 /* SwiftRefresher.framework */; };
 		6588F6E31D91EDB30072ED52 /* SwiftRefresherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588F6E21D91EDB30072ED52 /* SwiftRefresherTests.swift */; };
 		6588F6E51D91EDB30072ED52 /* SwiftRefresher.h in Headers */ = {isa = PBXBuildFile; fileRef = 6588F6D71D91EDB30072ED52 /* SwiftRefresher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6588F6EF1D91F0680072ED52 /* ProductsDiff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588F6EE1D91F0680072ED52 /* ProductsDiff.swift */; };
+		6588F6F11D91F59C0072ED52 /* DeDupeSortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6588F6F01D91F59C0072ED52 /* DeDupeSortedArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		6588F6DD1D91EDB30072ED52 /* SwiftRefresherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftRefresherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6588F6E21D91EDB30072ED52 /* SwiftRefresherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftRefresherTests.swift; sourceTree = "<group>"; };
 		6588F6E41D91EDB30072ED52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6588F6EE1D91F0680072ED52 /* ProductsDiff.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsDiff.swift; sourceTree = "<group>"; };
+		6588F6F01D91F59C0072ED52 /* DeDupeSortedArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeDupeSortedArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				6588F6D71D91EDB30072ED52 /* SwiftRefresher.h */,
+				6588F6EE1D91F0680072ED52 /* ProductsDiff.swift */,
+				6588F6F01D91F59C0072ED52 /* DeDupeSortedArray.swift */,
 				6588F6D81D91EDB30072ED52 /* Info.plist */,
 			);
 			path = SwiftRefresher;
@@ -149,6 +155,7 @@
 					6588F6D31D91EDB30072ED52 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 3YHJ3C68N2;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					6588F6DC1D91EDB30072ED52 = {
@@ -198,6 +205,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6588F6EF1D91F0680072ED52 /* ProductsDiff.swift in Sources */,
+				6588F6F11D91F59C0072ED52 /* DeDupeSortedArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +328,7 @@
 		6588F6E91D91EDB30072ED52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -333,6 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.arcore.SwiftRefresher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -340,6 +351,7 @@
 		6588F6EA1D91EDB30072ED52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
@@ -361,6 +373,7 @@
 		6588F6EC1D91EDB30072ED52 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3YHJ3C68N2;
 				INFOPLIST_FILE = SwiftRefresherTests/Info.plist;
@@ -374,6 +387,7 @@
 		6588F6ED1D91EDB30072ED52 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3YHJ3C68N2;
 				INFOPLIST_FILE = SwiftRefresherTests/Info.plist;

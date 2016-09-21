@@ -7,30 +7,38 @@
 //
 
 import XCTest
-@testable import SwiftRefresher
+import SwiftRefresher
 
 class SwiftRefresherTests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testProductsDiff() {
+        let case1 = [1, 3, 5]
+        let case2 = [5, 2, 0, 6, 2]
+        let case3 = [2, 1]
+        
+        
+        XCTAssertEqual(productsDiff(case1), [15, 5, 3])
+        XCTAssertEqual(productsDiff(case2), [0, 0, 120, 0, 0])
+        XCTAssertEqual(productsDiff(case3), [1 , 2])
+        
+    
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testDeDupedSortedArray() {
+        let case1 = [1, 1, 1, 2, 2, 3, 3]
+        let case2 = [0, 0, -2, 5, 8, 3, 9]
+        
+        
+        XCTAssertEqual(dedupeSortedArray(case1).0, [1, 2, 3])
+        XCTAssertEqual(dedupeSortedArray(case1).1, 3)
+        
+        XCTAssertEqual(dedupeSortedArray(case2).0, [0, -2, 5, 8, 3, 9])
+        XCTAssertEqual(dedupeSortedArray(case2).1, 6)
+        
+        
+        
+        
     }
     
 }
